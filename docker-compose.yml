@@ -20,7 +20,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - '12003:80'
+      - '8080:80'
     env_file: env/phpmyadmin.env
     environment:
       PMA_HOST: db
@@ -32,7 +32,7 @@ services:
       - db
     image: wordpress:latest
     ports:
-      - '12002:80'
+      - '8000:80'
     restart: always
     volumes:
       - ./src:/var/www/html
